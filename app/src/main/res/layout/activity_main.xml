@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/track_info_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/control_buttons_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/main_size"
+            android:layout_height="@dimen/main_size"
+            android:background="@drawable/circle"
+            android:importantForAccessibility="no"
+            android:src="@drawable/main_picture" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="@dimen/main_size"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/medium_margin"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:singleLine="true"
+            android:text="@string/title"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/medium_text_size"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="@dimen/main_size_seekbar"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:progressTint="@color/primary"
+            android:thumbTint="@color/primary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control_buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/track_info_layout">
+
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="@dimen/small_size"
+            android:layout_height="@dimen/small_size"
+            android:background="@color/transparent"
+            android:contentDescription="@string/previous_desc"
+            android:src="@drawable/ic_prev" />
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="@dimen/large_size"
+            android:layout_height="@dimen/large_size"
+            android:layout_marginHorizontal="@dimen/medium_margin"
+            android:background="@drawable/circle"
+            android:contentDescription="@string/play_pause_desc"
+            android:src="@drawable/ic_play" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="@dimen/small_size"
+            android:layout_height="@dimen/small_size"
+            android:background="@color/transparent"
+            android:contentDescription="@string/next_desc"
+            android:src="@drawable/ic_next" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

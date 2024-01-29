@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Music Player</string>
+
+    <string name="artist">Artist</string>
+    <string name="title">Title</string>
+
+    <string name="play_pause_desc">Play and pause button</string>
+    <string name="next_desc">Next track button</string>
+    <string name="previous_desc">Previous track button</string>
+
+</resources>
